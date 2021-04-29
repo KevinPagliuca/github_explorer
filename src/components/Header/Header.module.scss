@@ -2,7 +2,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 1rem 0;
+    padding: 2rem 0;
     width: 100%;
     .logoHeader {
         display: flex;
@@ -19,5 +19,24 @@
                 font: 500 1.5rem Roboto, sans-serif;
             }
         }
+    }
+}
+
+.backButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--gray-600);
+    border-radius: 5px;
+    transition: all .25s;
+    span {
+        font: 600 1.125rem Roboto;
+    }
+    svg {
+        margin-right: .5rem;
+    }
+    &:hover {
+        cursor: pointer;
+        color: var(--gray-700);
     }
 }
