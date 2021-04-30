@@ -1,3 +1,74 @@
 .containerSingleRepo {
     display: flex;
+    flex-direction: column;
+}
+
+.repoContent {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem 0;
+    .header {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        .ownerRepoImg {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid var(--gray-700);
+            border-radius: 50%;
+            margin-right: 1rem;
+            min-width: 124px;
+            min-height: 124px;
+            img {
+                width: 120px;
+                height: 120px;
+                border-radius: 50%;
+            }
+        }
+        .repoName {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            strong {
+                font: 700 2.5rem Roboto;
+                text-align: justify;
+                line-height: 3rem;
+                color: var(--gray-800);
+            }
+            p {
+                font: 400 1.125rem Inter;
+                color: var(--gray-600);
+                line-height: 1.25rem;
+                padding-left: 1rem;
+                text-align: justify;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                display: -webkit-box;
+                -webkit-line-clamp: 5; //Número de linhas para mostrar.
+                -webkit-box-orient: vertical;
+            }
+        }
+    }
+    .repoStats {
+        display: flex;
+        align-items: center;
+        margin: 2rem 0;
+        div {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin-right: 4rem;
+            strong {
+                font: 400 2.5rem Roboto;
+                color: var(--gray-800);
+                padding-top: .35rem;
+            }
+            span {
+                font: 400 1.125rem Roboto;
+                color: var(--gray-600);
+                padding-top: .35rem;
+            }
+        }
+    }
 }

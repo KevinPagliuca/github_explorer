@@ -56,7 +56,7 @@
 }
 
 .searchContent {
-    margin-top: 5rem;
+    padding: 5rem 0;
 }
 
 .containerCard {
@@ -68,16 +68,19 @@
     box-shadow: 0 2px 16px rgba(0, 0, 0, .25);
     border-radius: 5px;
     max-height: 7rem;
+    overflow: hidden;
     transition: filter .25s;
     &:hover {
         filter: brightness(0.925);
+        box-shadow: 0 2px 16px 4px rgba(0, 0, 0, .25);
         cursor: pointer;
     }
     &:not(:last-child) {
-        margin-bottom: 1rem;
+        margin-bottom: 2rem;
     }
     >svg {
         margin-left: auto;
+        min-width: 1.5rem;
         color: var(--gray-500);
     }
 }
@@ -101,8 +104,7 @@
         display: flex;
         flex-direction: column;
         padding-left: 1rem;
-        max-width: 500px;
-        overflow: hidden;
+        margin-right: 1rem;
         >strong {
             font: 700 1.5rem Roboto, sans-serif;
             line-height: 1.75rem;
@@ -111,10 +113,12 @@
         >span {
             font: 500 .875rem Inter, sans-serif !important;
             line-height: 1.125rem;
-            max-width: 500px;
-            text-overflow: ellipsis;
-            word-wrap: break-word;
             color: var(--gray-600);
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 2; //Número de linhas para mostrar.
+            -webkit-box-orient: vertical;
         }
     }
 }

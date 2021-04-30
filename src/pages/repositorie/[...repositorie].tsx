@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import Image from 'next/image';
 import React from 'react';
 import { useRouter } from 'next/router';
 
@@ -18,9 +19,34 @@ const SingleRepo: React.FC = ({ repoInfo }: any) => {
       <Header withBackButton />
 
       <div className={styles.repoContent}>
-        <div>
-          {/* <Image src={} */}
+        <div className={styles.header}>
+          <div className={styles.ownerRepoImg}>
+            <Image src={repoInfo.owner.avatar_url} width={400} height={400} />
+          </div>
+          <div className={styles.repoName}>
+            <strong>{repoInfo.full_name}</strong>
+            <p>{repoInfo.description}</p>
+          </div>
         </div>
+
+        <div className={styles.repoStats}>
+          <div>
+            <strong>{repoInfo.stargazers_count}</strong>
+            <span>Stars</span>
+          </div>
+          <div>
+            <strong>{repoInfo.forks_count}</strong>
+            <span>Forks</span>
+          </div>
+          <div>
+            <strong>{repoInfo.open_issues}</strong>
+            <span>Issues abertas</span>
+          </div>
+        </div>
+      
+        <div className={styles.repoFolders}>
+          
+        </div>      
       </div>
     </div>
   );
